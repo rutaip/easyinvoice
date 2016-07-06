@@ -23,6 +23,19 @@ class CustomersController extends Controller
         return view('customers.index', compact('customers'));
     }
 
+    public function show($id)
+    {
+
+        $customer = Customer::findOrFail($id);
+
+        /*if  (Gate::denies('customers', $customers)) {
+
+            abort(403, 'Sorry, not allowed');
+        }*/
+
+        return view('customers.show', compact('customer'));
+    }
+
     public function create()
     {
         //$countries = Countries::orderBy('name')->lists('name', 'name');

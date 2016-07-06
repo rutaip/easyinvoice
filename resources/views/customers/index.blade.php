@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-4">
             <div class="col-md-6">
-                <button class="btn btn-default btn-block" type="button" data-toggle="modal" data-target="#filters">Filters</button>
+                <!--<button class="btn btn-default btn-block" type="button" data-toggle="modal" data-target="#filters">Filters</button>-->
             </div>
             <div class="col-md-6">
                 {{ Html::link('customers/create', 'New Customer', array('class' => 'btn btn-primary btn-block'))}}
@@ -31,7 +31,7 @@
                 <th class="text-center">Mobile</th>
                 <th class="text-center">Email</th>
                 <th class="text-center">Status</th>
-                <th class="text-center" width="10%">Options</th>
+                <th class="text-center" width="15%">Options</th>
             </tr>
             </thead>
 
@@ -54,8 +54,9 @@
                         <td class="text-center">
 
                             {!! Form::model($customer, ['method' => 'DELETE', 'url' => 'customers/' . $customer->id, 'class' => 'btn-delete']) !!}
-                                <a href="{{ url('customers/' . $customer->id) . '/edit' }}" class="btn btn-primary btn-xs">edit</a>
-                                {!! Form::submit('delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                            {{ Html::link('customers/'. $customer->id, 'Show', array('class' => 'btn btn-success btn-xs'))}}
+                            {{ Html::link('customers/'. $customer->id . '/edit', 'Edit', array('class' => 'btn btn-primary btn-xs'))}}
+                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                             {!! Form::close() !!}
                         </td>
                 </tr>
