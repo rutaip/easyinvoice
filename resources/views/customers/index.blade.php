@@ -3,7 +3,7 @@
 @section('page')
     <div class="row">
         <div class="col-md-8">
-            General Status
+            Paylower Customers
         </div>
         <div class="col-md-4">
             <div class="col-md-6">
