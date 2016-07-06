@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="http://www.presenceco.com/templates/theme1313/favicon.ico">-->
+    <meta name="description" content="invoice web application">
+    <meta name="author" content="Rutaip">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
 
     <title>Paylower</title>
 
