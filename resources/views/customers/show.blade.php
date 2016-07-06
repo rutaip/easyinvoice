@@ -41,7 +41,7 @@
                 </tr>
                 <tr>
                     <th scope=row>Customer Last Name</th>
-                    <td>{{ $customer->lastname }}</td>
+                    <td>{{ $customer->last_name }}</td>
                 </tr>
                 <tr>
                     <th scope=row>Attn Name</th>
