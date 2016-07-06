@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://www.presenceco.com/templates/theme1313/favicon.ico">
+    <!--<link rel="icon" href="http://www.presenceco.com/templates/theme1313/favicon.ico">-->
 
     <title>Paylower</title>
 
@@ -41,7 +41,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Presence Project Server</a>
+            <a class="navbar-brand" href="/">Paylower Invoice System</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
