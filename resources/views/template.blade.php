@@ -59,7 +59,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalog <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li>{!! HTML::link('customers', 'Customers') !!}</li>
-                        <li>{!! HTML::link('vehicles', 'Vehicles') !!}</li>
+                        <li>{!! HTML::link('cars', 'Vehicles') !!}</li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Site Permissions</li>
                             <li>{!! HTML::link('users', 'Users') !!}</li>

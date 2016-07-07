@@ -21,8 +21,6 @@
 
 @section('content')
 
-    {!! Form::model($customer, ['method' => 'PATCH', 'url' => 'customers/' . $customer->id]) !!}
-
     <div class="row">
         <div class="col-md-6">
             <table class="table table-bordered">
