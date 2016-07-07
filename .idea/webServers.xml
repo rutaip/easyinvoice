@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="c9af71e3-1320-4f4f-9fe3-03e481484bf2" name="Homestead" url="http://192.168.10.10">
-        <fileTransfer host="192.168.10.10" port="22" rootFolder="/Code" accessType="SFTP" username="vagrant">
+        <fileTransfer host="192.168.10.10" port="22" rootFolder="/Code" accessType="SFTP" password="dfdcdfcbdfcddfd8dfcbdfc4dfde" username="vagrant">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

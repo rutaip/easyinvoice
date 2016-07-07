@@ -20,3 +20,4 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::resource('customers', 'CustomersController');
 Route::resource('cars', 'CarsController');
+Route::resource('services', 'ServicesController');

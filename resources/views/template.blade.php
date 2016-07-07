@@ -60,6 +60,7 @@
                     <ul class="dropdown-menu">
                         <li>{!! HTML::link('customers', 'Customers') !!}</li>
                         <li>{!! HTML::link('cars', 'Vehicles') !!}</li>
+                        <li>{!! HTML::link('services', 'Services') !!}</li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Site Permissions</li>
                             <li>{!! HTML::link('users', 'Users') !!}</li>
