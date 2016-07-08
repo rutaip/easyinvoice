@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
 use App\Car;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests;
 use App\Http\Requests\CarRequest;
+use DB;
 
 class CarsController extends Controller
 {
@@ -38,9 +40,11 @@ class CarsController extends Controller
 
     public function create()
     {
-        //$countries = Countries::orderBy('name')->lists('name', 'name');
+        $customers = Customer::select(DB::raw('CONCAT(last_name, ", ", name) as customer'), 'id')
+            ->orderBy('last_name')
+            ->lists('customer', 'id');
 
-        return view('cars.create', compact('region', 'countries'));
+        return view('cars.create', compact('region', 'customers'));
     }
 
     public function store(CarRequest $request)
@@ -59,9 +63,11 @@ class CarsController extends Controller
     public function edit($id)
     {
         $car = Car::findOrFail($id);
-        //$countries = Countries::lists('name', 'name');
+        $customers = Customer::select(DB::raw('CONCAT(last_name, ", ", name) as customer'), 'id')
+            ->orderBy('last_name')
+            ->lists('customer', 'id');
 
-        return view('cars.edit', compact('car'));
+        return view('cars.edit', compact('car', 'customers'));
     }
 
     public function update(CarRequest $request, $id)

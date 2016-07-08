@@ -25,8 +25,8 @@
             <thead>
             <tr class="active">
                 <th class="text-center" width="10%">Customer ID</th>
-                <th class="text-center">Name</th>
                 <th class="text-center">Last Name</th>
+                <th class="text-center">Name</th>
                 <th class="text-center">Phone</th>
                 <th class="text-center">Mobile</th>
                 <th class="text-center">Email</th>
@@ -39,8 +39,8 @@
             @foreach($customers as $customer)
                 <tr>
                     <td>{{$customer->id}}</td>
-                    <td>{{$customer->name}}</td>
                     <td>{{$customer->last_name}}</td>
+                    <td>{{$customer->name}}</td>
                     <td>{{$customer->phone}}</td>
                     <td>{{$customer->mobile}}</td>
                     <td>{{$customer->email}}</td>

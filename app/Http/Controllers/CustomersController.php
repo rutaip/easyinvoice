@@ -13,7 +13,8 @@ class CustomersController extends Controller
     public function index()
     {
 
-        $customers = Customer::latest()->get();
+        $customers = Customer::orderBy('last_name')
+            ->get();
 
         /*if  (Gate::denies('customers', $customers)) {
 

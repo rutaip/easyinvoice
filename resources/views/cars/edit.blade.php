@@ -61,7 +61,7 @@
                 <tbody>
                 <tr>
                     <th scope=row>{!! Form::label('customer_id', 'Customer') !!}</th>
-                    <td>{!! Form::text('customer_id', null, ['class' => 'form-control', 'required' => 'required']) !!}</td>
+                    <td>{!! Form::select('customer_id', $customers, null, ['class' => 'form-control', 'required' => 'required']) !!}</td>
                 </tr>
                 <tr>
                     <th scope=row>{!! Form::label('notes', 'Notes') !!}</th>
