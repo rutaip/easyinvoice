@@ -3,7 +3,7 @@
 @section('page')
     <div class="row">
         <div class="col-md-8">
-            {{ $car->make }} | {{ $car->model }} | {{ $car->customer_id }}
+            {{ $car->make }} | {{ $car->model }}
         </div>
         <div class="col-md-4">
             <div class="col-md-6">
@@ -71,7 +71,7 @@
                 <tbody>
                 <tr>
                     <th scope=row>Customer ID</th>
-                    <td>{{ $car->customer_id }}</td>
+                    <td>{{ $car->customer->name }} {{ $car->customer->last_name }}</td>
                 </tr>
                 <tr>
                     <th scope=row>Notes</th>

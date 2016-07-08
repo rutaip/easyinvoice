@@ -42,7 +42,7 @@
                     <td>{{$car->model}}</td>
                     <td>{{$car->license_plate}}</td>
                     <td>{{$car->VIN}}</td>
-                    <td>{{$car->customer_id}}</td>
+                    <td>{{ $car->customer->name }} {{ $car->customer->last_name }}</td>
                         <td class="text-center">
 
                             {!! Form::model($car, ['method' => 'DELETE', 'url' => 'cars/' . $car->id, 'class' => 'btn-delete']) !!}

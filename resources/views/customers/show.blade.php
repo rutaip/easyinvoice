@@ -110,6 +110,35 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <caption>Customer Cars</caption>
+                <thead>
+                <tr class="active">
+                    <th width="30%">Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>License Plate</th>
+                    <th>VIN</th>
+                    <th>Options</th>
+                </tr> </thead>
+                <tbody>
+
+                @foreach($customer->cars as $car)
+                <tr>
+                    <th scope=row>{{ $car->make }}</th>
+                    <td>{{ $car->model }}</td>
+                    <td>{{ $car->year }}</td>
+                    <td>{{ $car->license_plate }}</td>
+                    <td>{{ $car->VIN }}</td>
+                    <td>{{ Html::link('cars/'. $car->id, 'Show', array('class' => 'btn btn-success btn-xs'))}}</td>
+                </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
     <br>
 
 @stop
