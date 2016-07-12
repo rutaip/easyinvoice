@@ -124,8 +124,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-{!! Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js') !!}
-<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+{!! Html::script('js/jquery.min.js') !!}
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 {!! Html::script('js/bootstrap.js') !!}
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 {!! Html::script('js/ie10-viewport-bug-workaround.js') !!}

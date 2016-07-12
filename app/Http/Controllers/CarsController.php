@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Requests;
 use App\Http\Requests\CarRequest;
 use DB;
+use Response;
 
 class CarsController extends Controller
 {
@@ -97,4 +98,32 @@ class CarsController extends Controller
 
         return redirect('cars');
     }
+
+    public function info($id)
+    {
+
+        $cars = Car::where('customer_id', $id)
+            ->get();
+
+        /*if  (Gate::denies('customers', $customers)) {
+
+            abort(403, 'Sorry, not allowed');
+        }*/
+
+        return Response::json(['success' => true, 'info' => $cars]);
+    }
+
+    public function details($id)
+    {
+
+        $details = Car::findorFail($id);
+
+        /*if  (Gate::denies('customers', $customers)) {
+
+            abort(403, 'Sorry, not allowed');
+        }*/
+
+        return Response::json(['success' => true, 'info' => $details]);
+    }
+    
 }

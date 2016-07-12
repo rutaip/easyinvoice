@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Response;
 use App\Customer;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests;
@@ -92,4 +93,18 @@ class CustomersController extends Controller
 
         return redirect('customers');
     }
+
+    public function info($id)
+    {
+
+        $customer = Customer::findOrFail($id);
+
+        /*if  (Gate::denies('customers', $customers)) {
+
+            abort(403, 'Sorry, not allowed');
+        }*/
+
+        return Response::json(['success' => true, 'info' => $customer]);
+    }
+
 }

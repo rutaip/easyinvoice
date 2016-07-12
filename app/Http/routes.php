@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('customers/info/{id}', 'CustomersController@info');
 Route::resource('customers', 'CustomersController');
+Route::get('cars/info/{id}', 'CarsController@info');
+Route::get('cars/details/{id}', 'CarsController@details');
 Route::resource('cars', 'CarsController');
 Route::resource('services', 'ServicesController');
+Route::resource('invoices', 'InvoicesController');
