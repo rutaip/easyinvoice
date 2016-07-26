@@ -43,6 +43,7 @@ class InvoicesController extends Controller
         $customers = Customer::select(DB::raw('CONCAT(last_name, ", ", name) as customer'), 'id')
             ->orderBy('last_name')
             ->lists('customer', 'id');
+        $customers->prepend('Select customer');
         $services = Service::orderBy('name')->lists('name', 'id');
         $services->prepend('Choose Product | Service');
 
