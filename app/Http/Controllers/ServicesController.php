@@ -7,6 +7,7 @@ use App\Service;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests;
 use App\Http\Requests\ServiceRequest;
+use Response;
 
 class ServicesController extends Controller
 {
@@ -91,4 +92,18 @@ class ServicesController extends Controller
 
         return redirect('services');
     }
+
+    public function details($id)
+    {
+
+        $details = Service::findorFail($id);
+
+        /*if  (Gate::denies('customers', $customers)) {
+
+            abort(403, 'Sorry, not allowed');
+        }*/
+
+        return Response::json(['success' => true, 'info' => $details]);
+    }
+
 }

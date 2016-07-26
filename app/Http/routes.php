@@ -23,5 +23,6 @@ Route::resource('customers', 'CustomersController');
 Route::get('cars/info/{id}', 'CarsController@info');
 Route::get('cars/details/{id}', 'CarsController@details');
 Route::resource('cars', 'CarsController');
+Route::get('services/details/{id}', 'ServicesController@details');
 Route::resource('services', 'ServicesController');
 Route::resource('invoices', 'InvoicesController');

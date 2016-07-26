@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Invoice;
 use App\Customer;
+use App\Service;
 use DB;
 use App\Http\Requests;
 use App\Http\Requests\InvoiceRequest;
@@ -42,8 +43,10 @@ class InvoicesController extends Controller
         $customers = Customer::select(DB::raw('CONCAT(last_name, ", ", name) as customer'), 'id')
             ->orderBy('last_name')
             ->lists('customer', 'id');
+        $services = Service::orderBy('name')->lists('name', 'id');
+        $services->prepend('Choose Product | Service');
 
-        return view('invoices.create', compact('region', 'customers'));
+        return view('invoices.create', compact('region', 'customers', 'services'));
     }
 
     public function store(InvoiceRequest $request)
@@ -52,6 +55,8 @@ class InvoicesController extends Controller
 
             abort(403, 'Sorry, not allowed');
         }*/
+
+        return $request->all();
 
         Invoice::create($request->all());
 
