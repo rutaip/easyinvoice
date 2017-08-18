@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-6">
             <table class="table table-bordered">
-                <caption>General Information</caption>
+                <caption>General Info</caption>
                 <thead>
                 <tr class="active">
                     <th>Field</th>
@@ -56,7 +56,7 @@
                 <thead>
                 <tr class="active">
                     <th>Field</th>
-                    <th>Content</th>
+                    <th>Add content</th>
                 </tr> </thead>
                 <tbody>
                 <tr>
